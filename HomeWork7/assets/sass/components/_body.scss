@@ -1,0 +1,8 @@
+@use "../utils/mixins" as m;
+
+.all {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: white;
+  transform: translate(42%, 10%);
+  @include m.width-height(50em, 30em);
+}

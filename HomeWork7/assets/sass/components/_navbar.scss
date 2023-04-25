@@ -1,0 +1,11 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+
+header {
+  @include m.width-height(100%, 30%);
+
+  & h1 {
+    color: v.$MainHeadersColor;
+    transform: translate(10%, 200%);
+  }
+}

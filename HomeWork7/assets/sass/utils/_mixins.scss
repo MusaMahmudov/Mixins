@@ -1,0 +1,4 @@
+@mixin width-height($width: 50%, $height: 100%) {
+  width: $width;
+  height: $height;
+}

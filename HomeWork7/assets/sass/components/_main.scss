@@ -1,0 +1,66 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+
+main {
+  @include m.width-height(100%, 70%);
+  display: flex;
+}
+.persons {
+  @include m.width-height;
+}
+.persons-info {
+  width: 50%;
+  display: flex;
+  transform: translateY(30%);
+  margin: 2% 0% 5% 25%;
+  transition: box-shadow 0.5s ease;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  &:first-child {
+    margin-top: 10%;
+  }
+  &-name {
+    & h1 {
+      color: v.$Person-name-color;
+      font-size: 90%;
+      margin-top: 10.5%;
+      margin-bottom: 0%;
+    }
+    & h2 {
+      color: v.$Person-position-color;
+      margin-top: 2%;
+      font-size: 80%;
+    }
+  }
+
+  &-img {
+    width: 35%;
+    img {
+      @include m.width-height(65%, 70%);
+      border-radius: 50%;
+      padding: 10%;
+    }
+  }
+}
+.experience {
+  @include m.width-height;
+
+  & h1 {
+    color: v.$MainHeadersColor;
+    font-size: 100%;
+    margin-bottom: 1%;
+    margin-top: 10%;
+  }
+  & i {
+    color: v.$Star-Color;
+    font-size: 70%;
+    margin-bottom: 2%;
+  }
+  & p {
+    width: 80%;
+    font-size: 80%;
+  }
+}
